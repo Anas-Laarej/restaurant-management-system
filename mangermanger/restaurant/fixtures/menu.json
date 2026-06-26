@@ -1,0 +1,42 @@
+[
+  {"model": "restaurant.categorie", "pk": 1, "fields": {"nom": "Entrées", "ordre": 1}},
+  {"model": "restaurant.categorie", "pk": 2, "fields": {"nom": "Tagines", "ordre": 2}},
+  {"model": "restaurant.categorie", "pk": 3, "fields": {"nom": "Couscous", "ordre": 3}},
+  {"model": "restaurant.categorie", "pk": 4, "fields": {"nom": "Grillades", "ordre": 4}},
+  {"model": "restaurant.categorie", "pk": 5, "fields": {"nom": "Salades & Soupes", "ordre": 5}},
+  {"model": "restaurant.categorie", "pk": 6, "fields": {"nom": "Desserts", "ordre": 6}},
+  {"model": "restaurant.categorie", "pk": 7, "fields": {"nom": "Boissons", "ordre": 7}},
+
+  {"model": "restaurant.plat", "pk": 1,  "fields": {"nom": "Briouates au fromage et miel",       "description": "Feuilletés croustillants farcis de fromage fondu et nappés de miel.",          "prix": "35.00", "categorie": 1, "disponible": true, "image_url": "", "temps_preparation": 10}},
+  {"model": "restaurant.plat", "pk": 2,  "fields": {"nom": "Pastilla au poulet",                  "description": "Feuilleté sucré-salé au poulet, amandes et cannelle.",                         "prix": "55.00", "categorie": 1, "disponible": true, "image_url": "", "temps_preparation": 15}},
+  {"model": "restaurant.plat", "pk": 3,  "fields": {"nom": "Zaalouk",                             "description": "Caviar d'aubergines grillées aux tomates, ail et cumin.",                      "prix": "30.00", "categorie": 1, "disponible": true, "image_url": "", "temps_preparation": 10}},
+  {"model": "restaurant.plat", "pk": 4,  "fields": {"nom": "Taktouka",                            "description": "Salade chaude de poivrons rôtis et tomates à l'huile d'olive.",               "prix": "30.00", "categorie": 1, "disponible": true, "image_url": "", "temps_preparation": 10}},
+
+  {"model": "restaurant.plat", "pk": 5,  "fields": {"nom": "Tagine poulet olives & citron confit","description": "Poulet mijoté aux olives vertes et citrons confits, sauce safranée.",          "prix": "95.00", "categorie": 2, "disponible": true, "image_url": "", "temps_preparation": 40}},
+  {"model": "restaurant.plat", "pk": 6,  "fields": {"nom": "Tagine agneau pruneaux & amandes",   "description": "Épaule d'agneau fondante aux pruneaux, amandes et épices douces.",              "prix": "110.00","categorie": 2, "disponible": true, "image_url": "", "temps_preparation": 50}},
+  {"model": "restaurant.plat", "pk": 7,  "fields": {"nom": "Tagine kefta aux œufs",              "description": "Boulettes de viande épicées en sauce tomate, œufs pochés.",                    "prix": "85.00", "categorie": 2, "disponible": true, "image_url": "", "temps_preparation": 35}},
+  {"model": "restaurant.plat", "pk": 8,  "fields": {"nom": "Tagine de légumes",                  "description": "Assortiment de légumes de saison mijotés aux épices marocaines.",               "prix": "75.00", "categorie": 2, "disponible": true, "image_url": "", "temps_preparation": 35}},
+
+  {"model": "restaurant.plat", "pk": 9,  "fields": {"nom": "Couscous royal",                     "description": "Semoule fine avec agneau, poulet et merguez, sept légumes et bouillon.",       "prix": "130.00","categorie": 3, "disponible": true, "image_url": "", "temps_preparation": 45}},
+  {"model": "restaurant.plat", "pk": 10, "fields": {"nom": "Couscous poulet & légumes",          "description": "Semoule au poulet fermier et légumes du marché.",                              "prix": "95.00", "categorie": 3, "disponible": true, "image_url": "", "temps_preparation": 40}},
+  {"model": "restaurant.plat", "pk": 11, "fields": {"nom": "Couscous sept légumes (végétarien)", "description": "Semoule traditionnelle aux sept légumes, sans viande.",                        "prix": "85.00", "categorie": 3, "disponible": true, "image_url": "", "temps_preparation": 35}},
+
+  {"model": "restaurant.plat", "pk": 12, "fields": {"nom": "Brochettes d'agneau",                "description": "Cubes d'agneau marinés aux herbes, grillés au charbon de bois.",               "prix": "90.00", "categorie": 4, "disponible": true, "image_url": "", "temps_preparation": 20}},
+  {"model": "restaurant.plat", "pk": 13, "fields": {"nom": "Poulet grillé aux épices",           "description": "Demi-poulet mariné au chermoula, grillé et servi avec frites.",                "prix": "85.00", "categorie": 4, "disponible": true, "image_url": "", "temps_preparation": 25}},
+  {"model": "restaurant.plat", "pk": 14, "fields": {"nom": "Merguez grillées",                   "description": "Saucisses épicées maison grillées, accompagnées de pain khobz.",               "prix": "75.00", "categorie": 4, "disponible": true, "image_url": "", "temps_preparation": 15}},
+  {"model": "restaurant.plat", "pk": 15, "fields": {"nom": "Kefta grillée",                      "description": "Boulettes de viande hachée épicées, façonnées sur brochette.",                  "prix": "80.00", "categorie": 4, "disponible": true, "image_url": "", "temps_preparation": 15}},
+
+  {"model": "restaurant.plat", "pk": 16, "fields": {"nom": "Harira",                             "description": "Soupe traditionnelle marocaine aux lentilles, pois chiches et tomates.",       "prix": "30.00", "categorie": 5, "disponible": true, "image_url": "", "temps_preparation": 10}},
+  {"model": "restaurant.plat", "pk": 17, "fields": {"nom": "Salade marocaine",                   "description": "Tomates fraîches, concombre, poivrons, oignon et persil à l'huile d'olive.", "prix": "35.00", "categorie": 5, "disponible": true, "image_url": "", "temps_preparation": 8}},
+  {"model": "restaurant.plat", "pk": 18, "fields": {"nom": "Chorba",                             "description": "Soupe de vermicelles à la viande et aux légumes, parfumée au ras el hanout.", "prix": "30.00", "categorie": 5, "disponible": true, "image_url": "", "temps_preparation": 10}},
+
+  {"model": "restaurant.plat", "pk": 19, "fields": {"nom": "Bastilla au lait",                   "description": "Crêpe feuilletée à la crème pâtissière, amandes et fleur d'oranger.",          "prix": "45.00", "categorie": 6, "disponible": true, "image_url": "", "temps_preparation": 10}},
+  {"model": "restaurant.plat", "pk": 20, "fields": {"nom": "Chebakia",                           "description": "Gâteaux de sésame frits, imbibés de miel et parfumés à la fleur d'oranger.",  "prix": "30.00", "categorie": 6, "disponible": true, "image_url": "", "temps_preparation": 5}},
+  {"model": "restaurant.plat", "pk": 21, "fields": {"nom": "Cornes de gazelle",                  "description": "Pâtisseries en croissant fourrées à la pâte d'amandes et à la fleur d'oranger.","prix": "35.00","categorie": 6, "disponible": true, "image_url": "", "temps_preparation": 5}},
+  {"model": "restaurant.plat", "pk": 22, "fields": {"nom": "Fruits de saison",                   "description": "Assortiment de fruits frais de saison.",                                       "prix": "40.00", "categorie": 6, "disponible": true, "image_url": "", "temps_preparation": 5}},
+
+  {"model": "restaurant.plat", "pk": 23, "fields": {"nom": "Thé à la menthe",                    "description": "Thé vert traditionnel à la menthe fraîche, sucré à la marocaine.",             "prix": "20.00", "categorie": 7, "disponible": true, "image_url": "", "temps_preparation": 5}},
+  {"model": "restaurant.plat", "pk": 24, "fields": {"nom": "Jus d'orange frais",                 "description": "Oranges pressées à la minute.",                                               "prix": "25.00", "categorie": 7, "disponible": true, "image_url": "", "temps_preparation": 5}},
+  {"model": "restaurant.plat", "pk": 25, "fields": {"nom": "Eau minérale",                       "description": "Eau minérale 50cl.",                                                          "prix": "15.00", "categorie": 7, "disponible": true, "image_url": "", "temps_preparation": 1}},
+  {"model": "restaurant.plat", "pk": 26, "fields": {"nom": "Citronnade maison",                  "description": "Citrons pressés, eau, sucre et menthe, servis frais.",                        "prix": "25.00", "categorie": 7, "disponible": true, "image_url": "", "temps_preparation": 5}}
+]
