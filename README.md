@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-MangerManger — Restaurant Management System
+Zefran — Restaurant Management System
 
 > A full-stack restaurant management ERP developed as a final-year project in Computer Engineering at EMSI.
 
-MangerManger is a web-based restaurant management system designed to centralize and simplify daily restaurant operations.
+Zefran is a web-based restaurant management system designed to centralize and simplify daily restaurant operations.
 
 The application is divided into two main interfaces:
 
