@@ -1,54 +1,263 @@
+<<<<<<< HEAD
 MangerManger — Restaurant Management System
 
-Restaurant management ERP, built as a final-year project (PFA) in Computer Engineering at EMSI.
+> A full-stack restaurant management ERP developed as a final-year project in Computer Engineering at EMSI.
 
-📋 Description
+MangerManger is a web-based restaurant management system designed to centralize and simplify daily restaurant operations.
 
-MangerManger is a full-featured restaurant management web app, made up of two distinct interfaces:
+The application is divided into two main interfaces:
 
-Staff Interface (Manager, Chef, Waiter, Cashier) — ERP dashboard to manage orders, stock, reservations, billing, and statistics
-Client Interface — storefront site with online ordering and reservations
-🛠️ Tech Stack
+- 🧑‍💼 **Staff Interface** — Management dashboard for restaurant staff
+- 🛒 **Client Interface** — Customer-facing application for online orders and reservations
 
-Backend — mangermanger folder
+---
 
-Django 4.x + Django REST Framework
-SQLite
-django-cors-headers
-Token-based authentication (DRF)
+## 🚀 Features
 
-Frontend — mangermanger-front folder
+### 🧑‍💼 Staff Management
 
-React 19 + Vite
-Axios
-React Router DOM
-Recharts (dashboard charts)
-🚀 Installation
-Backend (Django)
-bash
+The staff interface provides dedicated functionalities for:
+
+- 👨‍💼 Manager
+- 👨‍🍳 Chef
+- 🧑‍🍳 Waiter
+- 💳 Cashier
+
+Depending on the user's role, different features and operations are available.
+
+### 📦 Restaurant Operations
+
+- 📋 Order management
+- 🍔 Menu management
+- 📦 Stock management
+- 🪑 Table management
+- 📅 Reservation management
+- 💰 Billing and payment management
+- 📊 Statistics and dashboards
+
+### 🛒 Client Interface
+
+Customers can access a dedicated interface to:
+
+- Browse the restaurant menu
+- Place online orders
+- Make reservations
+- Interact with the restaurant's online storefront
+
+### 🔐 Authentication
+
+The backend uses token-based authentication through Django REST Framework.
+
+---
+
+## 🏗️ Project Architecture
+
+The project follows a separated frontend/backend architecture:
+
+```text
+restaurant-management-system/
+│
+├── mangermanger/              # Django Backend
+│   ├── manage.py
+│   ├── ...
+│   └── ...
+│
+├── mangermanger-front/        # React Frontend
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ...
+│
+├── .gitignore
+└── README.md
+```
+
+### Backend
+
+The backend is responsible for:
+
+- REST API
+- Authentication
+- Business logic
+- Database management
+- Data processing
+
+### Frontend
+
+The frontend communicates with the Django REST API and provides the user interfaces for staff and customers.
+
+---
+
+## 🛠️ Technologies
+
+### Backend
+
+- 🐍 Python
+- Django 4.x
+- Django REST Framework
+- SQLite
+- django-cors-headers
+- Token Authentication
+
+### Frontend
+
+- ⚛️ React 19
+- Vite
+- Axios
+- React Router DOM
+- Recharts
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Anas-Laarej/restaurant-management-system.git
+
+cd restaurant-management-system
+```
+
+---
+
+## 🐍 Backend Setup
+
+Navigate to the backend:
+
+```bash
 cd mangermanger
+```
+
+Create a virtual environment:
+
+```bash
 python -m venv .venv
-.venv\Scripts\activate          # Windows
-# or source .venv/bin/activate  # Linux/Mac
+```
 
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Install the dependencies:
+
+```bash
 pip install django djangorestframework django-cors-headers
+```
+
+Run database migrations:
+
+```bash
 python manage.py migrate
-python seed_data.py             # test data (optional)
+```
+
+Optional: populate the database with test data:
+
+```bash
+python seed_data.py
+```
+
+Start the Django development server:
+
+```bash
 python manage.py runserver
-Frontend (React)
-bash
+```
+
+Backend:
+
+```text
+http://localhost:8000
+```
+
+---
+
+## ⚛️ Frontend Setup
+
+Open another terminal and navigate to:
+
+```bash
 cd mangermanger-front
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
+```
 
-The backend runs by default on http://localhost:8000 and the frontend on http://localhost:5173.
+Frontend:
 
-👥 Team
+```text
+http://localhost:5173
+```
 
-Built by:
+---
 
-Anas Laarej
-Anass Nazih
-📄 License
+## 🔗 Frontend ↔ Backend
 
-Academic project — EMSI, Computer Engineering.
+The React frontend communicates with the Django backend through REST API endpoints.
+
+```text
+React + Vite
+     │
+     │ Axios / HTTP Requests
+     ▼
+Django REST Framework
+     │
+     ▼
+   SQLite
+```
+
+---
+
+## 📊 Dashboard
+
+The staff interface includes dashboards and statistical visualizations to help restaurant staff monitor operations and activity.
+
+Charts are implemented using **Recharts**.
+
+---
+
+## 👥 Team
+
+Developed by:
+
+- **Anas Laarej**
+- **Anass Nazih**
+
+As part of a final-year Computer Engineering project at **EMSI**.
+
+---
+
+## 🎓 Academic Project
+
+This project was developed as part of an academic project in **Computer Engineering at EMSI**.
+
+---
+
+## 📄 License
+
+This project is an academic project developed for educational purposes.
+
+---
+
+## ⭐ Project
+
+If you find this project interesting, feel free to explore the repository and follow the development.
+
+**GitHub:**
+https://github.com/Anas-Laarej/restaurant-management-system
