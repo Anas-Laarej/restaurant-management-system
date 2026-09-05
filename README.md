@@ -1,174 +1,183 @@
 # 🍽️ Zefran — Restaurant Management System
 
-> A full-stack restaurant management system designed to centralize and simplify restaurant operations.
+> A full-stack web application for managing restaurant operations, orders, reservations, stock, tables, staff and customer interactions.
 
-Zefran is a modern web-based restaurant management platform developed as part of a final-year **Computer Engineering project at EMSI**.
+**Zefran** is a restaurant management system developed as part of a **Computer Engineering project at EMSI**.
 
-The application provides dedicated interfaces for restaurant staff and customers, allowing the management of daily operations such as orders, reservations, menu items, tables, stock and customer interactions.
-
----
-
-## 📌 Project Overview
-
-Zefran is designed to digitize and simplify restaurant management through a centralized platform.
-
-The system is divided into two main interfaces:
-
-- 🧑‍💼 **Staff Interface** — Management and operational dashboard
-- 🛒 **Client Interface** — Customer-facing platform
-
-The application follows a modern **frontend/backend architecture**, where a React application communicates with a Django REST API.
+The platform is designed to centralize restaurant operations through a modern web application with dedicated interfaces for restaurant staff and customers.
 
 ---
 
-## 🚀 Features
+## 📌 Overview
 
-### 🧑‍💼 Staff Management
+Zefran provides a centralized solution for managing the main activities of a restaurant.
 
-Zefran provides role-based interfaces for different restaurant employees:
+The application includes dedicated interfaces for different types of users:
 
-- 👨‍💼 **Manager**
-- 👨‍🍳 **Chef**
-- 🧑‍🍳 **Waiter**
-- 💳 **Cashier**
+- 🧑‍💼 **Manager** — Restaurant administration and monitoring
+- 👨‍🍳 **Chef** — Kitchen and order management
+- 🧑‍🍳 **Waiter** — Tables and customer orders
+- 💳 **Cashier** — Order and payment operations
+- 👤 **Client** — Menu, orders, reservations and reviews
 
-Each role has access to the functionalities required for its responsibilities.
-
----
-
-### 📋 Restaurant Management
-
-The platform provides several tools for managing restaurant operations:
-
-- 📋 Order management
-- 🍔 Menu management
-- 📦 Stock management
-- 🪑 Table management
-- 📅 Reservation management
-- ⭐ Customer reviews
-- 📊 Dashboard and statistics
-- 👥 Staff management
-- 🔐 Authentication and authorization
-- 💰 Billing and payment management
+The system follows a **frontend/backend architecture** with a REST API connecting the user interface to the backend.
 
 ---
 
-### 🛒 Client Features
+# 🚀 Features
 
-Customers can interact with the restaurant through a dedicated interface.
+## 👥 Role-Based Management
 
-They can:
+Different users have access to different functionalities according to their role.
+
+### 🧑‍💼 Manager
+
+- Restaurant management
+- Staff management
+- Menu management
+- Stock monitoring
+- Reservation management
+- Dashboard and statistics
+- Operational monitoring
+
+### 👨‍🍳 Chef
+
+- View orders
+- Manage kitchen orders
+- Follow order status
+- Monitor food preparation
+
+### 🧑‍🍳 Waiter
+
+- Manage tables
+- Create and manage orders
+- Follow customer orders
+- Manage restaurant service
+
+### 💳 Cashier
+
+- Manage orders
+- Handle payment operations
+- Monitor completed orders
+
+### 👤 Client
+
+Customers can:
 
 - Browse the restaurant
-- View available menu items
+- View the menu
 - Place orders
 - Make reservations
 - Submit reviews
-- Access the online restaurant interface
+- Interact with the restaurant platform
 
 ---
 
-## 🖼️ Screenshots
+# 📋 Restaurant Management
+
+Zefran provides several modules for managing restaurant operations:
+
+- 🍔 **Menu Management**
+- 📋 **Order Management**
+- 🪑 **Table Management**
+- 📅 **Reservation Management**
+- 📦 **Stock Management**
+- 👥 **Staff Management**
+- ⭐ **Customer Reviews**
+- 📊 **Dashboard & Statistics**
+- 🔐 **Authentication & Authorization**
+
+---
+
+# 🖼️ Screenshots
+
+The project includes screenshots of the main interfaces.
 
 ### 🔐 Login
 
 ![Login](screenshots/interface_login.png)
 
----
-
 ### 🏠 Home
 
 ![Home](screenshots/interface_accueil.png)
-
----
 
 ### 👤 Client Interface
 
 ![Client Interface](screenshots/interface_client.png)
 
----
-
 ### 📊 Dashboard
 
 ![Dashboard](screenshots/interface_dashboard.png)
 
----
-
-### 🛒 Order Management
+### 📋 Orders
 
 ![Orders](screenshots/interface_commandes.png)
 
----
-
-### 👨‍🍳 Kitchen Interface
+### 👨‍🍳 Kitchen
 
 ![Kitchen](screenshots/interface_cuisine.png)
 
----
-
-### 📅 Reservation Management
+### 📅 Reservations
 
 ![Reservations](screenshots/interface_reservations.png)
 
----
-
-### 📦 Stock Management
+### 📦 Stock
 
 ![Stock](screenshots/interface_stocks.png)
 
----
-
-### ⭐ Customer Reviews
+### ⭐ Reviews
 
 ![Reviews](screenshots/interface_avis.png)
 
 ---
 
-## 🏗️ System Architecture
+# 🏗️ Architecture
 
-Zefran follows a separated **frontend/backend architecture**.
+Zefran follows a separated frontend/backend architecture.
 
 ```text
-                         ┌──────────────────────┐
-                         │     React + Vite     │
-                         │      Frontend        │
-                         └──────────┬───────────┘
-                                    │
-                              Axios / HTTP
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │   Django REST API    │
-                         │       Backend        │
-                         └──────────┬───────────┘
-                                    │
-                                    ▼
-                         ┌──────────────────────┐
-                         │       SQLite         │
-                         │      Database        │
-                         └──────────────────────┘
+                    ┌────────────────────────┐
+                    │     Web Interface      │
+                    │   React / Frontend     │
+                    └────────────┬───────────┘
+                                 │
+                                 │ HTTP / REST API
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │      Django API        │
+                    │ Django REST Framework  │
+                    └────────────┬───────────┘
+                                 │
+                                 │ Django ORM
+                                 │
+                                 ▼
+                    ┌────────────────────────┐
+                    │        SQLite          │
+                    │       Database         │
+                    └────────────────────────┘
 ```
 
-### 🔄 Application Flow
+### Application Flow
 
 ```text
-Client / Staff
-      │
-      ▼
-React Frontend
-      │
-      │ HTTP Requests
-      ▼
-Django REST Framework
-      │
-      │ Business Logic
-      ▼
+User
+ │
+ ▼
+Frontend
+ │
+ │ HTTP Requests
+ ▼
+Django REST API
+ │
+ │ Business Logic
+ ▼
 Database
 ```
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```text
 restaurant-management-system/
@@ -187,10 +196,16 @@ restaurant-management-system/
 │   ├── frontend/
 │   │   └── ...
 │   │
+│   ├── staticfiles/
+│   │   └── ...
+│   │
 │   ├── manage.py
 │   ├── seed_data.py
 │   ├── requirements.txt
 │   └── db.sqlite3
+│
+├── mangermanger-front/
+│   └── ...
 │
 ├── screenshots/
 │   ├── interface_login.png
@@ -218,8 +233,8 @@ restaurant-management-system/
 - Django REST Framework
 - SQLite
 - django-cors-headers
-- Token Authentication
 - REST API
+- Token Authentication
 
 ## Frontend
 
@@ -232,7 +247,7 @@ restaurant-management-system/
 - HTML5
 - CSS3
 
-## Development Tools
+## Development
 
 - Git
 - GitHub
@@ -244,15 +259,10 @@ restaurant-management-system/
 
 # ⚙️ Installation
 
-## 1️⃣ Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Anas-Laarej/restaurant-management-system.git
-```
-
-Navigate to the project:
-
-```bash
 cd restaurant-management-system
 ```
 
@@ -260,13 +270,13 @@ cd restaurant-management-system
 
 # 🐍 Backend Setup
 
-Navigate to the Django backend:
+Navigate to the backend:
 
 ```bash
 cd mangermanger
 ```
 
-## Create a Virtual Environment
+### Create a Virtual Environment
 
 ```bash
 python -m venv .venv
@@ -284,45 +294,39 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
----
-
-## Install Dependencies
-
-Install all required Python packages:
+### Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
----
+### Check the Django Project
 
-## Database Setup
+```bash
+python manage.py check
+```
 
-Run Django migrations:
+### Apply Database Migrations
 
 ```bash
 python manage.py migrate
 ```
 
----
+### Optional: Load Seed Data
 
-## Optional: Load Test Data
-
-If seed data is available:
+If you want to populate the database with initial/test data:
 
 ```bash
 python seed_data.py
 ```
 
----
-
-## Start the Backend Server
+### Start the Backend
 
 ```bash
 python manage.py runserver
 ```
 
-The Django API will be available at:
+The backend will normally be available at:
 
 ```text
 http://127.0.0.1:8000/
@@ -332,15 +336,13 @@ http://127.0.0.1:8000/
 
 # ⚛️ Frontend Setup
 
-Open another terminal.
-
-Navigate to the frontend directory:
+If your frontend is located in `mangermanger-front`:
 
 ```bash
-cd mangermanger/frontend
+cd mangermanger-front
 ```
 
-Install the JavaScript dependencies:
+Install dependencies:
 
 ```bash
 npm install
@@ -358,93 +360,95 @@ The frontend will normally be available at:
 http://localhost:5173/
 ```
 
+> If the active frontend is the `mangermanger/frontend` directory instead, use that directory according to the project's current configuration.
+
 ---
 
-# 🔗 Frontend ↔ Backend Communication
+# 🔗 Frontend & Backend Communication
 
-The React frontend communicates with the Django backend through REST API endpoints.
+The frontend communicates with the Django backend through REST API requests.
 
 ```text
-┌─────────────────────┐
-│    React + Vite     │
-│      Frontend       │
-└──────────┬──────────┘
+┌──────────────────────┐
+│   React + Vite       │
+│      Frontend        │
+└──────────┬───────────┘
            │
-           │ Axios
-           │ HTTP Requests
+           │ Axios / HTTP
            ▼
-┌─────────────────────┐
-│   Django REST API   │
-│       Backend       │
-└──────────┬──────────┘
+┌──────────────────────┐
+│   Django REST API    │
+│       Backend        │
+└──────────┬───────────┘
            │
-           │ ORM
+           │ Django ORM
            ▼
-┌─────────────────────┐
-│       SQLite        │
-│      Database       │
-└─────────────────────┘
+┌──────────────────────┐
+│       SQLite         │
+│      Database        │
+└──────────────────────┘
 ```
 
 ---
 
 # 🔐 Authentication & Authorization
 
-The application implements authentication and role-based authorization.
-
-Different users can access different functionalities depending on their role.
+Zefran uses authentication and role-based authorization to control access to the application's different functionalities.
 
 ```text
-                    User
-                     │
-                     ▼
-              Authentication
-                     │
-                     ▼
-              User Role Check
-                     │
-          ┌──────────┼──────────┐
-          ▼          ▼          ▼
-       Manager      Chef      Waiter
-          │          │          │
-          └──────────┼──────────┘
-                     ▼
-              Authorized Access
+                     User
+                       │
+                       ▼
+                Authentication
+                       │
+                       ▼
+                 User Role
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+          ▼            ▼            ▼
+       Manager        Chef        Waiter
+          │            │            │
+          └────────────┼────────────┘
+                       │
+                       ▼
+                Authorized Access
 ```
+
+This approach allows each employee to access only the functionalities associated with their responsibilities.
 
 ---
 
 # 📊 Dashboard
 
-The staff dashboard provides an overview of restaurant activity.
+The management dashboard provides an overview of restaurant activity.
 
-It can be used to monitor:
+It can be used to monitor information such as:
 
 - Orders
 - Reservations
-- Restaurant activity
 - Stock
-- Statistics
-- Operational information
+- Restaurant activity
+- Operational statistics
 
-Data visualization is implemented using **Recharts**.
+Data visualization is implemented using **Recharts** where applicable.
 
 ---
 
 # 📦 Main Modules
 
-| Module            | Description                        |
-| ----------------- | ---------------------------------- |
-| 🔐 Authentication | User login and access control      |
-| 👥 Staff          | Employee and role management       |
-| 🍔 Menu           | Restaurant menu management         |
-| 🛒 Orders         | Order creation and tracking        |
-| 👨‍🍳 Kitchen        | Kitchen order management           |
-| 🪑 Tables         | Restaurant table management        |
-| 📅 Reservations   | Customer reservation management    |
-| 📦 Stock          | Inventory and stock management     |
-| ⭐ Reviews        | Customer review management         |
-| 📊 Dashboard      | Statistics and restaurant overview |
+| Module            | Description                            |
+| ----------------- | -------------------------------------- |
+| 🔐 Authentication | User authentication and access control |
+| 👥 Staff          | Employee and role management           |
+| 🍔 Menu           | Menu and food item management          |
+| 📋 Orders         | Order creation and tracking            |
+| 👨‍🍳 Kitchen        | Kitchen order management               |
+| 🪑 Tables         | Restaurant table management            |
+| 📅 Reservations   | Customer reservation management        |
+| 📦 Stock          | Inventory and stock monitoring         |
+| ⭐ Reviews        | Customer feedback management           |
+| 📊 Dashboard      | Restaurant activity and statistics     |
 
 ---
 
@@ -454,51 +458,47 @@ The main objectives of Zefran are:
 
 - Digitize restaurant management
 - Centralize restaurant operations
-- Improve order management
-- Simplify reservation management
-- Improve stock monitoring
-- Provide role-based access
-- Improve communication between restaurant employees
-- Provide customers with an easy-to-use online interface
+- Simplify order management
+- Improve reservation management
+- Monitor restaurant stock
+- Facilitate staff coordination
+- Implement role-based access
+- Improve the customer experience
 - Reduce manual management tasks
 
 ---
 
 # 🔮 Future Improvements
 
-Possible future improvements include:
+Possible future developments include:
 
 - 💳 Online payment integration
 - 📱 Mobile application
 - 🔔 Real-time notifications
+- 📧 Email notifications
 - 📈 Advanced analytics
 - 🤖 AI-powered recommendations
-- 📦 Advanced inventory forecasting
+- 📦 Intelligent inventory forecasting
 - 🧾 Automatic invoice generation
 - ☁️ Cloud deployment
-- 🔒 Advanced security features
-- 📧 Email notifications
-- 📱 Responsive mobile-first improvements
+- 🔒 Advanced security
+- 📱 Improved responsive design
 
 ---
 
 # 🧪 Development
 
-Before starting development, make sure that:
+Before starting the project, verify that Python and Node.js are installed.
 
 ```bash
 python --version
 ```
 
-and:
-
 ```bash
 node --version
 ```
 
-are available on your system.
-
-For the backend:
+For the Django backend:
 
 ```bash
 python manage.py check
@@ -519,7 +519,7 @@ Developed by:
 - **Anas Laarej**
 - **Anass Nazih**
 
-🎓 Computer Engineering — **EMSI**
+🎓 **Computer Engineering — EMSI**
 
 ---
 
@@ -527,30 +527,30 @@ Developed by:
 
 Zefran was developed as part of an academic **Computer Engineering project at EMSI**.
 
-The project focuses on applying software engineering concepts including:
+The project applies software engineering concepts including:
 
-- Software architecture
+- Web application development
 - REST API development
-- Database management
 - Frontend development
 - Backend development
+- Database management
 - Authentication
 - Role-based authorization
-- Agile development
-- Version control with Git
+- Software architecture
+- Version control with Git and GitHub
 
 ---
 
 # 📄 License
 
-This project was developed for educational and academic purposes.
+This project was developed for **educational and academic purposes**.
 
 ---
 
-# ⭐ Project
+# ⭐ Repository
 
-If you find this project interesting, feel free to explore the repository and follow its development.
+If you find this project interesting, feel free to explore the source code and follow its development.
 
-**Repository:**
+**GitHub Repository:**
 
 https://github.com/Anas-Laarej/restaurant-management-system
